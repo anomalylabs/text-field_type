@@ -1,4 +1,4 @@
-<?php namespace Addon\FieldType\Text;
+<?php namespace Streams\Addon\FieldType\Text;
 
 use Streams\Core\Addon\Presenter\FieldTypePresenter;
 
