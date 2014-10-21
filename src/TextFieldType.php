@@ -1,4 +1,4 @@
-<?php namespace Streams\Addon\FieldType\Text;
+<?php namespace Anomaly\Streams\FieldType\Text;
 
 use Streams\Core\Addon\FieldTypeAbstract;
 
