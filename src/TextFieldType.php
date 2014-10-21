@@ -1,13 +1,7 @@
-<?php namespace Anomaly\Streams\FieldType\Text;
+<?php namespace Anomaly\Streams\Addon\FieldType\Text;
 
-use Streams\Core\Addon\FieldTypeAbstract;
+use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
 
-class TextFieldType extends FieldTypeAbstract
+class TextFieldType extends FieldTypeAddon
 {
-    /**
-     * The database column type this field type uses.
-     *
-     * @var string
-     */
-    public $columnType = 'string';
 }
