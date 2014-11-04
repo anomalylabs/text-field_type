@@ -1,6 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\FieldType\Text;
 
-use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
+use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
 /**
  * Class TextFieldType
@@ -10,7 +10,7 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\FieldType\Text
  */
-class TextFieldType extends FieldTypeAddon
+class TextFieldType extends FieldType
 {
     // Ya..
 }
