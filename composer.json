@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/text-field-type",
+    "name": "anomaly/text-field_type",
     "type": "streams-addon",
     "description": "Text field type.",
     "authors": [
