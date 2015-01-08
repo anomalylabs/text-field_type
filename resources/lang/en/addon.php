@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Text',
-    'description' => 'Text field type.',
+    'description' => 'A text input field type.',
 ];
