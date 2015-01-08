@@ -13,5 +13,4 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 class TextFieldType extends FieldType
 {
 
-    // Ya..
 }
