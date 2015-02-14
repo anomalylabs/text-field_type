@@ -10,3 +10,11 @@ The text field type provides a basic HTML input with configurable type and place
 
 - `type` - text, email or password
 - `placeholder` - any string including translation keys
+
+The default type is "text".
+
+#### Example
+
+	config => [
+		'placeholder' => 'First Name'
+	]
