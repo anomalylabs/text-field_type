@@ -1,11 +1,11 @@
 {
     "name": "anomaly/text-field_type",
     "type": "streams-addon",
-    "description": "A text input field type.",
+    "description": "A simple text input field type.",
     "keywords": [
         "streams-addon",
         "text",
-        "pyrocms",
+        "field type",
         "laravel"
     ],
     "homepage": "http://anomaly.is/",
