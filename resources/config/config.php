@@ -6,7 +6,6 @@ return [
         'config' => [
             'options' => [
                 'text',
-                'email',
                 'password'
             ]
         ]
