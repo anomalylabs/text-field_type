@@ -1,16 +1,13 @@
 <?php
 
 return [
-    'type'        => [
+    'type' => [
         'type'   => 'anomaly.field_type.select',
         'config' => [
             'options' => [
-                'text',
-                'password'
+                'text'     => 'anomaly.field_type.text::config.type.option.text',
+                'password' => 'anomaly.field_type.text::config.type.option.password'
             ]
         ]
-    ],
-    'placeholder' => [
-        'type' => 'anomaly.field_type.text',
     ]
 ];

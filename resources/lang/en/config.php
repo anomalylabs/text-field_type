@@ -1,10 +1,12 @@
 <?php
 
 return [
-    'type'        => [
-        'label' => 'Type'
-    ],
-    'placeholder' => [
-        'label' => 'Placeholder'
+    'type' => [
+        'label'        => 'Input Type',
+        'instructions' => 'Specify the input type to display.',
+        'option'       => [
+            'text'     => 'Text',
+            'password' => 'Password'
+        ]
     ]
 ];
