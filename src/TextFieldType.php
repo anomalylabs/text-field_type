@@ -13,4 +13,23 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 class TextFieldType extends FieldType
 {
 
+    /**
+     * Get the rules.
+     *
+     * @return array
+     */
+    public function getRules()
+    {
+        $rules = parent::getRules();
+
+        if ($min = array_get($this->getConfig(), 'min')) {
+            $rules[] = 'min:' . $min;
+        }
+
+        if ($max = array_get($this->getConfig(), 'max')) {
+            $rules[] = 'max:' . $max;
+        }
+
+        return $rules;
+    }
 }

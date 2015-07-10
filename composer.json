@@ -1,15 +1,14 @@
 {
     "name": "anomaly/text-field_type",
     "type": "streams-addon",
-    "description": "A simple text input field type.",
+    "description": "A tags input field type.",
     "keywords": [
-        "streams-addon",
-        "text",
-        "field type",
-        "laravel"
+        "streams field type",
+        "streams addon",
+        "field type"
     ],
     "homepage": "http://anomaly.is/",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -26,11 +25,5 @@
         "psr-4": {
             "Anomaly\\TextFieldType\\": "src/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    },
-    "minimum-stability": "dev"
+    }
 }
