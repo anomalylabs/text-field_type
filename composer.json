@@ -1,7 +1,7 @@
 {
     "name": "anomaly/text-field_type",
     "type": "streams-addon",
-    "description": "A tags input field type.",
+    "description": "A simple text input field type.",
     "keywords": [
         "streams field type",
         "streams addon",
