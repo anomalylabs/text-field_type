@@ -18,7 +18,7 @@ protected $fields = [
 
 ### `type`
 
-The type of text input to use. Valid options are `'text'` or `'password'`. The default value is `'text'`.
+The type of text input to use. Valid options are `'text'`, `'email'`, or `'password'`. The default value is `'text'`.
 
 ### `min`
 

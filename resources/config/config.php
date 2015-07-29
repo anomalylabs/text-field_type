@@ -5,8 +5,9 @@ return [
         'type'   => 'anomaly.field_type.select',
         'config' => [
             'options' => [
-                'text'     => 'anomaly.field_type.text::config.type.text',
-                'password' => 'anomaly.field_type.text::config.type.password'
+                'text'     => 'anomaly.field_type.text::config.type.option.text',
+                'email'    => 'anomaly.field_type.text::config.type.option.email',
+                'password' => 'anomaly.field_type.text::config.type.option.password'
             ]
         ]
     ],
