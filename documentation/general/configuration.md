@@ -2,19 +2,17 @@
 
 **Example Definition:**
 
-```
-protected $fields = [
-    'example' => [
-        'type'   => 'anomaly.field_type.text',
-        'config' => [
-            'type'          => 'text',
-            'min'           => 10,
-            'max'           => 100,
-            'default_value' => 'Ryan Thompson'
+    protected $fields = [
+        'example' => [
+            'type'   => 'anomaly.field_type.text',
+            'config' => [
+                'type'          => 'text',
+                'min'           => 10,
+                'max'           => 100,
+                'default_value' => 'Ryan Thompson'
+            ]
         ]
-    ]
-];
-```
+    ];
 
 ### `type`
 
