@@ -2,6 +2,7 @@
 
 - [Introduction](#introduction)
 - [Configuration](#configuration)
+- [Output](#output)
 
 
 <a name="introduction"></a>
@@ -44,3 +45,9 @@ The maximum input length allowed. By default no maximum is enforced.
 ### `default_value`
 
 The default input value. The default value is `null`.
+
+
+<a name="output"></a>
+## Output
+
+This field type returns the value from the database by default.
