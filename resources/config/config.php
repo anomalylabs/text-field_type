@@ -2,8 +2,9 @@
 
 return [
     'type'          => [
-        'type'   => 'anomaly.field_type.select',
-        'config' => [
+        'type'     => 'anomaly.field_type.select',
+        'required' => true,
+        'config'   => [
             'options' => [
                 'text'     => 'anomaly.field_type.text::config.type.option.text',
                 'email'    => 'anomaly.field_type.text::config.type.option.email',

@@ -14,6 +14,15 @@ class TextFieldType extends FieldType
 {
 
     /**
+     * The config array.
+     *
+     * @var array
+     */
+    protected $config = [
+        'type' => 'text'
+    ];
+
+    /**
      * Get the rules.
      *
      * @return array
