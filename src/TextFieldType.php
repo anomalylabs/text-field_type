@@ -14,6 +14,13 @@ class TextFieldType extends FieldType
 {
 
     /**
+     * The field input view.
+     *
+     * @var string
+     */
+    protected $inputView = 'anomaly.field_type.text::input';
+
+    /**
      * The config array.
      *
      * @var array

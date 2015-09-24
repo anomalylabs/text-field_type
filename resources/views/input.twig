@@ -1,0 +1,14 @@
+{#{{ asset_add("styles.css", "anomaly.field_type.text::less/jquery.textcomplete.less") }}
+{{ asset_add("scripts.js", "anomaly.field_type.text::js/jquery.textcomplete.min.js") }}
+{{ asset_add("scripts.js", "anomaly.field_type.text::js/input.js") }}#}
+
+<input
+        autocomplete="off"
+        value="{{ field_type.value }}"
+        name="{{ field_type.getInputName() }}"
+        class="form-control {{ field_type.class }}"
+        type="{{ field_type.config.type ?: 'text' }}"
+        placeholder="{{ trans(field_type.placeholder) }}"
+        {{ field_type.required ? 'required' }}
+        {{ field_type.disabled ? 'disabled' }}
+        {{ field_type.readonly ? 'readonly' }}>
