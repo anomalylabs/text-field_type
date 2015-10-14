@@ -46,6 +46,10 @@ class TextFieldType extends FieldType
             $rules[] = 'max:' . $max;
         }
 
+        if ($validate = array_get($this->getConfig(), 'validate')) {
+            $rules[] = $validate;
+        }
+
         return $rules;
     }
 }
