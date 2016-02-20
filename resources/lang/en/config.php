@@ -18,6 +18,10 @@ return [
         'label'        => 'Maximum Length',
         'instructions' => 'Specify the maximum input length allowed.'
     ],
+    'suggested'     => [
+        'label'        => 'Suggested Length',
+        'instructions' => 'Specify the suggested input length.'
+    ],
     'default_value' => [
         'label'        => 'Default Value',
         'instructions' => 'Specify the default value.'
