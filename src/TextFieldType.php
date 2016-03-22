@@ -26,7 +26,8 @@ class TextFieldType extends FieldType
      * @var array
      */
     protected $config = [
-        'type' => 'text'
+        'type' => 'text',
+        'max'  => 150
     ];
 
     /**
@@ -51,5 +52,15 @@ class TextFieldType extends FieldType
         }
 
         return $rules;
+    }
+
+    /**
+     * Get the column length.
+     *
+     * @return string
+     */
+    public function getColumnLength()
+    {
+        return $this->columnLength ?: $this->config('max');
     }
 }
