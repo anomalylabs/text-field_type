@@ -18,6 +18,10 @@ return [
         'label'        => 'Maximum Length',
         'instructions' => 'Specify the maximum input length allowed.'
     ],
+    'show_counter'  => [
+        'label'        => 'Show Counter',
+        'instructions' => 'Display the remaining characters while typing?'
+    ],
     'suggested'     => [
         'label'        => 'Suggested Length',
         'instructions' => 'Specify the suggested input length.'

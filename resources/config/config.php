@@ -18,6 +18,9 @@ return [
     'max'           => [
         'type' => 'anomaly.field_type.integer'
     ],
+    'show_counter'  => [
+        'type' => 'anomaly.field_type.boolean'
+    ],
     'suggested'     => [
         'type' => 'anomaly.field_type.integer'
     ],
