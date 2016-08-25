@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Texte',
-    'description' => 'Type de champs pour du texte simple.'
+    'description' => 'Type de champs pour du texte simple.',
 ];

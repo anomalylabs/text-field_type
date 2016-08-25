@@ -8,7 +8,6 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\TextFieldType
  */
 class TextFieldType extends FieldType
 {
@@ -27,7 +26,7 @@ class TextFieldType extends FieldType
      */
     protected $config = [
         'type' => 'text',
-        'max'  => 150
+        'max'  => 150,
     ];
 
     /**
