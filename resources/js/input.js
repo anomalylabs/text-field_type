@@ -1,7 +1,9 @@
-$(function () {
+$(document).on('ajaxComplete ready', function () {
 
     // Initialize text suggestions
-    $('input[data-provides="anomaly.field_type.text"]').each(function () {
+    $('input[data-provides="anomaly.field_type.text"]:not([data-initialized])').each(function () {
+
+        $(this).attr('data-initialized', '');
 
         var wrapper = $(this).closest('div');
         var counter = wrapper.find('.counter');
