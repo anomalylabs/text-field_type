@@ -10,6 +10,10 @@ return [
             'text'     => 'Text',
         ],
     ],
+    'mask'          => [
+        'label'        => 'Input Mask',
+        'instructions' => 'Specify an <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">input mask</a> as needed.',
+    ],
     'min'           => [
         'label'        => 'Minimum Length',
         'instructions' => 'Specify the minimum input length allowed.',

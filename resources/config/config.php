@@ -12,6 +12,9 @@ return [
             ],
         ],
     ],
+    'mask'          => [
+        'type' => 'anomaly.field_type.text',
+    ],
     'min'           => [
         'type' => 'anomaly.field_type.integer',
     ],

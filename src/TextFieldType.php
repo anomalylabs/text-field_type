@@ -53,6 +53,22 @@ class TextFieldType extends FieldType
     }
 
     /**
+     * Get the attributes.
+     *
+     * @return array
+     */
+    public function getAttributes()
+    {
+        $attributes = parent::getAttributes();
+
+        if ($mask = $this->config('mask')) {
+            $attributes['data-mask'] = $mask;
+        }
+
+        return $attributes;
+    }
+
+    /**
      * Get the column length.
      *
      * @return string
