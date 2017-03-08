@@ -12,7 +12,7 @@ return [
     ],
     'mask'          => [
         'label'        => 'Input Mask',
-        'instructions' => 'Specify an <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">input mask</a> as needed.',
+        'instructions' => 'Specify an <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">input mask</a>.',
     ],
     'min'           => [
         'label'        => 'Minimum Length',
