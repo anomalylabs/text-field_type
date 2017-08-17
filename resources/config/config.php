@@ -19,7 +19,10 @@ return [
         'type' => 'anomaly.field_type.integer',
     ],
     'max'           => [
-        'type' => 'anomaly.field_type.integer',
+        'type'   => 'anomaly.field_type.integer',
+        'config' => [
+            'max' => 255,
+        ],
     ],
     'show_counter'  => [
         'type' => 'anomaly.field_type.boolean',
