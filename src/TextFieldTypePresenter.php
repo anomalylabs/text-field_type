@@ -46,6 +46,6 @@ class TextFieldTypePresenter extends FieldTypePresenter
             return null;
         }
 
-        return $this->html->link('tel:' . $phone, $text ?: preg_replace('/\D/', '', $phone), $attributes);
+        return $this->html->link('tel:' . preg_replace('/\D/', '', $phone), $text ?: $phone, $attributes);
     }
 }
