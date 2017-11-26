@@ -26,7 +26,7 @@ class TextFieldType extends FieldType
      */
     protected $config = [
         'type' => 'text',
-        'max'  => '255',
+        'max'  => 255,
     ];
 
     /**
