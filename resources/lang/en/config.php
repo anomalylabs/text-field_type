@@ -14,6 +14,7 @@ return [
     'mask'          => [
         'label'        => 'Input Mask',
         'instructions' => 'Specify an <a href="https://github.com/RobinHerbots/Inputmask" target="_blank">input mask</a>.',
+        'placeholder'  => '(999) 999-999',
     ],
     'min'           => [
         'label'        => 'Minimum Length',
@@ -26,10 +27,6 @@ return [
     'show_counter'  => [
         'label'        => 'Show Counter',
         'instructions' => 'Display the remaining characters while typing?',
-    ],
-    'suggested'     => [
-        'label'        => 'Suggested Length',
-        'instructions' => 'Specify the suggested input length.',
     ],
     'default_value' => [
         'label'        => 'Default Value',
