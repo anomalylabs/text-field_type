@@ -28,9 +28,6 @@ return [
     'show_counter'  => [
         'type' => 'anomaly.field_type.boolean',
     ],
-    'suggested'     => [
-        'type' => 'anomaly.field_type.integer',
-    ],
     'default_value' => [
         'type' => 'anomaly.field_type.text',
     ],
