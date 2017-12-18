@@ -6,6 +6,7 @@ return [
         'required' => true,
         'config'   => [
             'options' => [
+                'tel'      => 'anomaly.field_type.text::config.type.option.tel',
                 'text'     => 'anomaly.field_type.text::config.type.option.text',
                 'email'    => 'anomaly.field_type.text::config.type.option.email',
                 'password' => 'anomaly.field_type.text::config.type.option.password',

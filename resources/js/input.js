@@ -1,32 +1,49 @@
-$(document).on('ajaxComplete ready', function () {
+(function (window, document) {
 
-    // Initialize text suggestions
-    $('input[data-provides="anomaly.field_type.text"]:not([data-initialized])').each(function () {
+    let fields = Array.from(
+        document.querySelectorAll('input[data-provides="anomaly.field_type.text"]')
+    );
 
-        $(this).attr('data-initialized', '');
+    fields.forEach(function (field) {
 
-        var wrapper = $(this).closest('div');
-        var counter = wrapper.find('.counter');
+        if (field.dataset.mask.length) {
+            Inputmask(field.dataset.mask).mask(field);
+        }
 
-        var suggested = $(this).data('suggested');
+        let wrapper = field.closest('div');
+        let counter = wrapper.querySelector('.counter');
+        let count = counter.querySelector('.count');
 
-        $(this).keyup(function () {
-            if (suggested && $(this).val().length > suggested) {
-                counter.addClass('text-warning');
+        let max = field.dataset.max;
+        let suggested = field.dataset.suggested;
+
+        /**
+         * Listen for keyup and update
+         * the counter and contexts.
+         */
+        field.addEventListener('keyup', function () {
+
+            if (max) {
+                count.innerText = max - field.value.length;
             } else {
-                counter.removeClass('text-warning');
+                count.innerText = field.value.length;
+            }
+
+            if (max && field.value.length > max) {
+                counter.classList.add('text-danger');
+            } else {
+                counter.classList.remove('text-danger');
             }
         });
 
-        $(this).characterCounter({
-            limit: $(this).data('max'),
-            counterSelector: $(this).closest('div').find('.count'),
-            onExceed: function () {
-                counter.addClass('text-danger');
-            },
-            onDeceed: function () {
-                counter.removeClass('text-danger');
-            }
-        });
+        /**
+         * Fire the count event initially
+         * to cause an initial count.
+         */
+        let event = document.createEvent('HTMLEvents');
+
+        event.initEvent('keyup', false, true);
+
+        field.dispatchEvent(event);
     });
-});
+})(window, document);

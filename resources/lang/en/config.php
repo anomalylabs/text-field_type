@@ -6,13 +6,14 @@ return [
         'instructions' => 'Specify the input type to display.',
         'option'       => [
             'password' => 'Password',
+            'tel'      => 'Telephone',
             'email'    => 'Email',
             'text'     => 'Text',
         ],
     ],
     'mask'          => [
         'label'        => 'Input Mask',
-        'instructions' => 'Specify an <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">input mask</a>.',
+        'instructions' => 'Specify an <a href="https://github.com/RobinHerbots/Inputmask" target="_blank">input mask</a>.',
     ],
     'min'           => [
         'label'        => 'Minimum Length',
