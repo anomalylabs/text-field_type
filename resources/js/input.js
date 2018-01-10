@@ -1,21 +1,13 @@
 (function (window, document) {
 
-    let fields = Array.from(
+    const fields = Array.from(
         document.querySelectorAll('input[data-provides="anomaly.field_type.text"]')
     );
 
     fields.forEach(function (field) {
 
-        if (field.dataset.mask.length) {
-            Inputmask(field.dataset.mask).mask(field);
-        }
-
-        let wrapper = field.closest('div');
-        let counter = wrapper.querySelector('.counter');
-        let count = counter.querySelector('.count');
-
-        let max = field.dataset.max;
-        let suggested = field.dataset.suggested;
+        const wrapper = field.parentElement;
+        const max = field.dataset.max;
 
         /**
          * Listen for keyup and update
@@ -23,16 +15,23 @@
          */
         field.addEventListener('keyup', function () {
 
-            if (max) {
-                count.innerText = max - field.value.length;
-            } else {
-                count.innerText = field.value.length;
+            const counter = wrapper.querySelector('.counter');
+            const count = wrapper.querySelector('.count');
+
+            if (count) {
+                if (max) {
+                    count.innerText = max - field.value.length;
+                } else {
+                    count.innerText = field.value.length;
+                }
             }
 
-            if (max && field.value.length > max) {
-                counter.classList.add('text-danger');
-            } else {
-                counter.classList.remove('text-danger');
+            if (counter) {
+                if (max && field.value.length > max) {
+                    counter.classList.add('text-danger');
+                } else {
+                    counter.classList.remove('text-danger');
+                }
             }
         });
 
@@ -40,10 +39,11 @@
          * Fire the count event initially
          * to cause an initial count.
          */
-        let event = document.createEvent('HTMLEvents');
+        const event = document.createEvent('HTMLEvents');
 
         event.initEvent('keyup', false, true);
 
         field.dispatchEvent(event);
     });
+
 })(window, document);
