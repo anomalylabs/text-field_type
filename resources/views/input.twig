@@ -15,6 +15,7 @@
         name="{{ field_type.getInputName() }}"
         data-max="{{ field_type.config.max }}"
         data-mask="{{ field_type.config.mask }}"
+        data-alias="{{ field_type.config.alias }}"
         data-regex="{{ field_type.config.regex }}"
         type="{{ field_type.config.type ?: 'text' }}"
         placeholder="{{ trans(field_type.placeholder) }}"
