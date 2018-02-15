@@ -14,7 +14,7 @@ return [
     'mask'          => [
         'label'        => 'Input Mask',
         'instructions' => 'Specify an <a href="https://github.com/RobinHerbots/Inputmask" target="_blank">input mask</a>.',
-        'placeholder'  => '(999) 999-999',
+        'placeholder'  => '(999) 999-9999',
     ],
     'min'           => [
         'label'        => 'Minimum Length',

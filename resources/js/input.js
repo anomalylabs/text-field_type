@@ -10,6 +10,15 @@
         const max = field.dataset.max;
 
         /**
+         * Check for an input mask.
+         */
+        if (field.dataset.regex != undefined && field.dataset.regex.length > 1) {
+            Inputmask({regex: field.dataset.regex}).mask(field);
+        } else if (field.dataset.mask != undefined && field.dataset.mask.length > 1) {
+            Inputmask(field.dataset.mask).mask(field);
+        }
+
+        /**
          * Listen for keyup and update
          * the counter and contexts.
          */
