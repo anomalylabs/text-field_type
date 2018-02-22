@@ -52,4 +52,24 @@ class TextFieldTypePresenter extends FieldTypePresenter
             $attributes
         );
     }
+
+    /**
+     * Return an HTML sms link.
+     *
+     * @param  null|string $text
+     * @param array        $attributes
+     * @return null|string
+     */
+    public function sms($text = null, array $attributes = [])
+    {
+        if (!$phone = $this->object->getValue()) {
+            return null;
+        }
+
+        return $this->html->link(
+            'sms:' . preg_replace('/[^\+\d]/', '', $phone),
+            $text ?: $phone,
+            $attributes
+        );
+    }
 }
