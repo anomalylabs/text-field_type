@@ -34,6 +34,18 @@ class TextFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
+     * Return preg_replace'd content.
+     *
+     * @param $pattern
+     * @param string $replacement
+     * @return string
+     */
+    public function preg($pattern, $replacement = '')
+    {
+        return preg_replace($pattern, $replacement, $this->object->getValue());
+    }
+
+    /**
      * Return an HTML tel link.
      *
      * @param  null|string $text
