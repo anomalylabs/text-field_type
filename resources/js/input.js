@@ -52,7 +52,7 @@
              */
             field.dispatchEvent(new Event('keyup'));
         });
-    }
+    };
 
     /**
      * Wait for InutMask to
