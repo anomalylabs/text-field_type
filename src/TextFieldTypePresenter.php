@@ -49,7 +49,7 @@ class TextFieldTypePresenter extends FieldTypePresenter
      * Return an HTML tel link.
      *
      * @param  null|string $text
-     * @param array        $attributes
+     * @param array $attributes
      * @return null|string
      */
     public function tel($text = null, array $attributes = [])
@@ -69,7 +69,7 @@ class TextFieldTypePresenter extends FieldTypePresenter
      * Return an HTML sms link.
      *
      * @param  null|string $text
-     * @param array        $attributes
+     * @param array $attributes
      * @return null|string
      */
     public function sms($text = null, array $attributes = [])
