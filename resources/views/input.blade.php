@@ -18,7 +18,6 @@
     'data-alias' => $fieldType->config('alias'),
     'data-regex' => $fieldType->config('regex'),
     'type' => $fieldType->config('type') ?: 'text',
-    'class' => 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline',
 ])) !!}>
 
 {{--{% if field_type.config.show_counter %}--}}

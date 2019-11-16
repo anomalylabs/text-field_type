@@ -19,7 +19,9 @@
             if (field.dataset.alias != undefined && field.dataset.regex.alias > 1) {
                 Inputmask(field.dataset.alias).mask(field);
             } else if (field.dataset.regex != undefined && field.dataset.regex.length > 1) {
-                Inputmask({regex: field.dataset.regex}).mask(field);
+                Inputmask({
+                    regex: field.dataset.regex
+                }).mask(field);
             } else if (field.dataset.mask != undefined && field.dataset.mask.length > 1) {
                 Inputmask(field.dataset.mask).mask(field);
             }
