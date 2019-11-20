@@ -1,4 +1,6 @@
-<?php namespace Anomaly\TextFieldType;
+<?php
+
+namespace Anomaly\TextFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
@@ -61,5 +63,21 @@ class TextFieldType extends FieldType
     public function getColumnLength()
     {
         return $this->columnLength ?: $this->config('max');
+    }
+
+    /**
+     * Get the attributes.
+     * 
+     * @return array
+     */
+    public function getAttributes()
+    {
+        return array_merge(parent::getAttributes(), [
+            'data-max' => $this->config('max'),
+            'data-mask' => $this->config('mask'),
+            'data-alias' => $this->config('alias'),
+            'data-regex' => $this->config('regex'),
+            'type' => $this->config('type') ?: 'text',
+        ]);
     }
 }

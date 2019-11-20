@@ -12,13 +12,7 @@
 
 {{--{{ asset_add("scripts.js", "anomaly.field_type.text::js/input.js") }}--}}
 
-<input {!! html_attributes($fieldType->attributes([
-    'data-max' => $fieldType->config('max'),
-    'data-mask' => $fieldType->config('mask'),
-    'data-alias' => $fieldType->config('alias'),
-    'data-regex' => $fieldType->config('regex'),
-    'type' => $fieldType->config('type') ?: 'text',
-])) !!}>
+<input {!! html_attributes($fieldType->attributes()) !!}>
 
 {{--{% if field_type.config.show_counter %}--}}
 {{--<small class="counter text-muted">--}}
