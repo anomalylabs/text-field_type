@@ -66,18 +66,19 @@ class TextFieldType extends FieldType
     }
 
     /**
-     * Get the attributes.
-     * 
-     * @return array
+     * Return merged attributes.
+     *
+     * @param array $attributes
      */
-    public function getAttributes()
+    public function attributes(array $attributes = [])
     {
-        return array_merge(parent::getAttributes(), [
+        return array_merge(parent::attributes(), [
             'data-max' => $this->config('max'),
             'data-mask' => $this->config('mask'),
             'data-alias' => $this->config('alias'),
             'data-regex' => $this->config('regex'),
             'type' => $this->config('type') ?: 'text',
-        ]);
+            'value' => $this->getValue(),
+        ], $attributes);
     }
 }
