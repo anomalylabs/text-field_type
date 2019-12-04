@@ -77,6 +77,8 @@ class TextFieldType extends FieldType
             'data-mask' => $this->config('mask'),
             'data-alias' => $this->config('alias'),
             'data-regex' => $this->config('regex'),
+            'data-lpignore' => $this->config('type') == 'password' ? true : false,
+            'autocomplete' => $this->config('type') == 'password' ? 'off' : false,
             'type' => $this->config('type') ?: 'text',
             'value' => $this->getValue(),
         ], $attributes);
