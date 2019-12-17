@@ -16,6 +16,8 @@ class TextFieldTypeServiceProvider extends AddonServiceProvider implements Defer
 
     /**
      * Return the provided services.
+     * 
+     * @return array
      */
     public function provides()
     {
