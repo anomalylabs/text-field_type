@@ -1,15 +1,17 @@
 (function (window, document) {
 
-    const fields = Array.prototype.slice.call(
-        document.querySelectorAll('input[data-provides="anomaly.field_type.text"]')
-    );
-
     /**
      * Initialize the fields
      */
     let initialize = function () {
-        fields.forEach(function (field) {
 
+        let fields = Array.prototype.slice.call(
+            document.querySelectorAll('input[data-provides="anomaly.field_type.text"]')
+        );
+
+        console.log(fields);
+
+        fields.forEach(function (field) {
             const wrapper = field.parentElement;
             const max = field.dataset.max;
 
@@ -19,7 +21,9 @@
             if (field.dataset.alias != undefined && field.dataset.regex.alias > 1) {
                 Inputmask(field.dataset.alias).mask(field);
             } else if (field.dataset.regex != undefined && field.dataset.regex.length > 1) {
-                Inputmask({regex: field.dataset.regex}).mask(field);
+                Inputmask({
+                    regex: field.dataset.regex
+                }).mask(field);
             } else if (field.dataset.mask != undefined && field.dataset.mask.length > 1) {
                 Inputmask(field.dataset.mask).mask(field);
             }
@@ -52,7 +56,7 @@
              */
             field.dispatchEvent(new Event('keyup'));
         });
-    };
+    }
 
     /**
      * Wait for InutMask to
