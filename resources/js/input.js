@@ -1,5 +1,5 @@
 var Inputmask = require('inputmask');
-alert('Here');
+
 let initialize = function () {
 
     let fields = Array.prototype.slice.call(
