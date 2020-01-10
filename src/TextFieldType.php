@@ -40,16 +40,12 @@ class TextFieldType extends FieldType
     {
         $rules = parent::getRules();
 
-        if ($min = array_get($this->getConfig(), 'min')) {
+        if ($min = $this->config('min')) {
             $rules[] = 'min:' . $min;
         }
 
-        if ($max = array_get($this->getConfig(), 'max')) {
+        if ($max = $this->config('max')) {
             $rules[] = 'max:' . $max;
-        }
-
-        if ($validate = array_get($this->getConfig(), 'validate')) {
-            $rules[] = $validate;
         }
 
         return $rules;

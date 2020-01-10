@@ -1,4 +1,6 @@
-<?php namespace Anomaly\TextFieldType;
+<?php
+
+namespace Anomaly\TextFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
 use Collective\Html\HtmlBuilder;
@@ -34,18 +36,6 @@ class TextFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * Return preg_replace'd content.
-     *
-     * @param $pattern
-     * @param string $replacement
-     * @return string
-     */
-    public function preg($pattern, $replacement = '')
-    {
-        return preg_replace($pattern, $replacement, $this->object->getValue());
-    }
-
-    /**
      * Return an HTML tel link.
      *
      * @param  null|string $text
@@ -77,6 +67,8 @@ class TextFieldTypePresenter extends FieldTypePresenter
         if (!$phone = $this->object->getValue()) {
             return null;
         }
+
+        $attributes['href'] = 'sms:' . preg_replace('/[^\+\d]/', '', $phone);
 
         return $this->html->link(
             'sms:' . preg_replace('/[^\+\d]/', '', $phone),
