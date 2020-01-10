@@ -2857,8 +2857,6 @@ module.exports = __webpack_require__(/*! ./dist/inputmask */ "./node_modules/inp
 
 var Inputmask = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/index.js");
 
-alert('Here');
-
 var initialize = function initialize() {
   var fields = Array.prototype.slice.call(document.querySelectorAll('input[data-provides="anomaly.field_type.text"]'));
   fields.forEach(function (field) {
