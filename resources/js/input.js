@@ -9,8 +9,6 @@
             document.querySelectorAll('input[data-provides="anomaly.field_type.text"]')
         );
 
-        console.log(fields);
-
         fields.forEach(function (field) {
             const wrapper = field.parentElement;
             const max = field.dataset.max;
