@@ -14,6 +14,13 @@ use Illuminate\Contracts\Support\DeferrableProvider;
 class TextFieldTypeServiceProvider extends AddonServiceProvider implements DeferrableProvider
 {
 
+    public function boot()
+    {
+        parent::boot();
+        
+        assets('scripts.js')->add('public::vendor/anomaly/field_type/text/js/input.js');
+    }
+
     /**
      * Return the provided services.
      * 
