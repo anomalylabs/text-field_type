@@ -16,8 +16,6 @@ class TextFieldTypeServiceProvider extends AddonServiceProvider implements Defer
 
     public function boot()
     {
-        parent::boot();
-        
         assets('scripts.js')->add('public::vendor/anomaly/field_type/text/js/input.js');
     }
 
