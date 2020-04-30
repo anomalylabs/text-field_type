@@ -32,14 +32,13 @@ class TextFieldType extends FieldType
     ];
 
     /**
-     * Get the rules.
+     * Return the rules.
      *
+     * @param array $rules
      * @return array
      */
-    public function getRules()
+    public function rules(array $rules = [])
     {
-        $rules = parent::getRules();
-
         if ($min = $this->config('min')) {
             $rules[] = 'min:' . $min;
         }
@@ -48,7 +47,7 @@ class TextFieldType extends FieldType
             $rules[] = 'max:' . $max;
         }
 
-        return $rules;
+        return parent::rules($rules);
     }
 
     /**
