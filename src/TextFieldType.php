@@ -26,7 +26,7 @@ class TextFieldType extends FieldType
      *
      * @var array
      */
-    protected $config = [
+    public $config = [
         'type' => 'text',
         'max'  => 255,
     ];
