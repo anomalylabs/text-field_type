@@ -22,6 +22,15 @@ class TextFieldType extends FieldType
     protected $inputView = 'anomaly.field_type.text::input';
 
     /**
+     * The addon aliases.
+     *
+     * @var array
+     */
+    public $bindings = [
+        'string' => 'anomaly.field_type.text',
+    ];
+
+    /**
      * The config array.
      *
      * @var array
