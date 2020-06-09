@@ -29,6 +29,6 @@ class TextFieldTypeServiceProvider extends AddonServiceProvider implements Defer
      */
     public function provides()
     {
-        return [TextFieldType::class, 'anomaly.field_type.text', 'text'];
+        return [TextFieldType::class, 'anomaly.field_type.text'];
     }
 }
