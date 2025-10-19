@@ -1,7 +1,7 @@
 <?php namespace Anomaly\TextFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
-use Anomaly\Streams\Platform\Html\HtmlBuilder;
+use Collective\Html\HtmlBuilder;
 
 /**
  * Class TextFieldTypePresenter
